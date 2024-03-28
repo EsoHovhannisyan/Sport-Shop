@@ -1,0 +1,1841 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding: 0 30px;
+}
+
+.Header_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Header_Title_Box {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.Header_Title_Box p {
+    color: white;
+}
+
+.Right_Links_Box {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Right_Links_Box a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: .4s;
+}
+
+.Right_Links_Box a:hover {
+    color: rgb(203, 203, 203);
+}
+
+.Menu_Box_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.Logo_Box {
+    width: 50px;
+    height: 50px;
+}
+
+.Logo_Box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Menu_Box {
+    width: 400px;
+    height: auto;
+    transition: 0.4s;
+}
+
+.Menu_Box ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.Menu_Box li {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Menu_Box li::before {
+    content: '';
+    position: absolute;
+    top: 95%;
+    width: 0;
+    left: 0;
+    height: 1px;
+    background-color: black;
+    transition: .4s;
+}
+
+.Menu_Box li:hover::before {
+    width: 100%;
+}
+
+.Menu_Box a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    /* background-color: red; */
+}
+
+.Menu_Btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.Cart_Container {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.Cart_Container button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.Main_Banner {
+    width: 100%;
+    height: 600px;
+    background-image: url(https://qi17.qodeinteractive.com/wp-content/uploads/2020/10/h1-img-1a.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Main_Banner_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Main_Bnner_Href_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Banner_Href {
+    flex: 50%;
+    height: 500px;
+    position: relative;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.Banner_Href:hover .Info_Box {
+    top: 66%;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(rgba(28, 28, 28, 0.178), rgba(57, 57, 57, 0.217), rgba(0, 0, 0, 0.201));
+}
+
+.Banner_Href:hover.Banner_Href p {
+    opacity: 1;
+}
+
+.Banner_Href:hover.Banner_Href button {
+    opacity: 1;
+}
+
+.Banner_Href:hover {
+    background-size: 105%;
+}
+
+.Info_Box {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px 70px;
+    /* background-color: red; */
+    gap: 15px;
+    transition: .4s;
+}
+
+.Banner_Href h2 {
+    color: white;
+}
+
+.Banner_Href p {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .4s;
+    opacity: 0;
+}
+
+.Banner_Href button {
+    width: 190px;
+    height: 50px;
+    font-weight: 800;
+    font-size: 12px;
+    background-color: white;
+    border: none;
+    transition: .4s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.Banner_Href button:hover {
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+.Product_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.Product_Tittle_Box {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    font-style: italic;
+}
+
+.Product_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Product {
+    width: 450px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Product_Img_Box {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.Product_Img_Box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.Button_Box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button_Box button {
+    position: absolute;
+    padding: 17px 40px;
+    cursor: pointer;
+    transition: .4s;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    opacity: 0;
+    border: none;
+    font-size: 20px;
+    transform: translateY(20px);
+}
+
+.Button_Box button:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.Product_Img_Box:hover img {
+    scale: 1.1;
+    rotate: -5deg;
+}
+
+.Product_Img_Box:hover .Button_Box {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+}
+
+.Product_Img_Box:hover button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Product_Info {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;
+}
+
+.Product_Info h3 {
+    font-style: italic;
+}
+
+.Product_Info span {
+    font-style: italic;
+    font-weight: 700;
+}
+
+.Product_Info>div:last-child span:first-child {
+    color: grey;
+    text-decoration: line-through;
+    margin: 10px;
+}
+
+.Product_Info>div:first-child span {
+    color: grey;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.Product_Banner_Box {
+    width: 100%;
+    height: auto;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.Banner_Box_Img {
+    width: 100%;
+    height: 650px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Banner_Info_Container {
+    width: 430px;
+    height: 300px;
+    position: absolute;
+    /* background: red; */
+    transform: translateX(330px);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Banner_Info_Container h1 {
+    color: white;
+    font-style: italic;
+}
+
+.Banner_Info_Container span {
+    font-size: 35px;
+    color: white;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.Banner_Info_Container p {
+    color: white;
+    line-height: 30px;
+}
+
+.Banner_Info_Container button {
+    padding: 20px 60px;
+    font-weight: 900;
+    font-size: 11px;
+    border: none;
+    cursor: pointer;
+    font-style: italic;
+    transition: .4s;
+}
+
+.Banner_Info_Container button:hover {
+    background-color: black;
+    color: white;
+}
+
+.Categorise_Banner_Container {
+    width: 100%;
+    height: auto;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    gap: 45px;
+}
+
+.Categorise_Banner_Container>div {
+    width: 100%;
+}
+
+.Categorise_Banner_Container h1 {
+    font-style: italic;
+}
+
+.Banner_Categories_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.Banner_Category {
+    width: 450px;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.Banner_Category_Img_Box {
+    width: 100%;
+    height: 100%;
+}
+
+.Banner_Category_Img_Box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .4s;
+}
+
+.Banner_Category_Info {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+    transition: .4s;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    gap: 15px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(6deg, rgba(0, 0, 0, 0.6446953781512605) 0%, rgba(0, 0, 0, 0.2637429971988795) 35%, rgba(0, 0, 0, 0.6334908963585435) 100%);
+}
+
+.Banner_Category_Info>div {
+    opacity: 0;
+    transition: .4s;
+    transform: translateY(15px);
+    transition-delay: .150s;
+}
+
+.Banner_Category_Info h3 {
+    font-style: italic;
+    color: white;
+    font-weight: 600;
+}
+
+.Banner_Category_Info span {
+    font-style: italic;
+    font-size: 16px;
+    color: white;
+}
+
+.Banner_Category_Info button {
+    font-size: 16px;
+    padding: 5px 0;
+    font-style: italic;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.Banner_Category_Info button::before {
+    content: '';
+    width: 0;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: .4s;
+}
+
+.Banner_Category_Info button:hover::before {
+    width: 100%;
+}
+
+.Banner_Category:hover .Banner_Category_Info {
+    opacity: 1;
+}
+
+.Banner_Category:hover .Banner_Category_Info>div {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Banner_Category:hover img {
+    scale: 1.1;
+}
+
+.Banner_Trending_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    gap: 20px;
+
+}
+
+.Banner_Trending_Container>div {
+    width: 100%;
+}
+
+.Banner_Trending_Container h1 {
+    font-style: italic;
+}
+
+.Trending_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.Trending_Img_Box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.Trending_Btn_Box {
+    width: 100%;
+    height: auto;
+    top: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+}
+
+.Trending_Img_Box img {
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.Trending_Img_Box button {
+    font-size: 13px;
+    font-weight: 700;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    position: relative;
+    padding: 15px 50px;
+    border: none;
+    cursor: pointer;
+}
+
+.Trending_Img_Box:hover img {
+    scale: 1.1;
+}
+
+.Trending_Img_Box button:hover {
+    background-color: black;
+    color: white;
+    transition: .4s;
+}
+
+.Slide_Container_Box {
+    width: 100%;
+    height: auto;
+    background: #F7F7F7;
+    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+.Slide_Container_Box h1 {
+    padding: 0 160px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.Slide_Container_Box h4 {
+    color: rgba(0, 0, 0, 0.423);
+}
+
+swiper-container {
+    width: 60%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: red; */
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Shop_Categories_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+    padding: 100px 0;
+}
+
+.Categories_Box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.Category {
+    position: relative;
+    width: 600px;
+    height: auto;
+    overflow: hidden;
+}
+
+.Category_Img_Box {
+    width: 100%;
+    height: 670px
+}
+
+.Category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+.Category :hover img {
+    scale: 1.1;
+}
+
+.Category_Info_Box {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    padding: 20px 50px;
+}
+
+.Category_Info_Box h2 {
+    font-style: italic;
+}
+
+.Partniors_Group_Container {
+    width: 100%;
+    height: auto;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 0px 100px 0px;
+    overflow: hidden;
+}
+
+
+
+.Partniors_Group_Img_Box {
+    display: block;
+    width: 250px;
+    /* box-shadow:  0 0 15px black; */
+    height: 100px;
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: 50% 0px;
+    transition: .4s;
+}
+
+.Partniors_Group_Img_Box:hover {
+    background-position: 50% -100px;
+}
+
+.Info_Web_Box_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 100px 0;
+    gap: 20px;
+}
+
+.Info_Web_Box_Container h1 {
+    font-style: italic;
+}
+
+.Info_Box_Img_Container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Web_Img_Box_Container {
+    width: 1000px;
+    height: auto;
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.Web_Img_Box_Container a {
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.Web_Img_Box_Container a::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    content: '';
+    transition: .4s;
+    opacity: 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.144), rgba(255, 255, 255, 0.136), rgba(255, 255, 255, 0.156));
+}
+
+.Web_Img_Box_Container a:hover::before {
+    opacity: 1;
+}
+
+.Insta_Img {
+    width: 900px;
+    height: 830px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.Insta_Img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 150px 300px 40px 300px;
+}
+
+footer p {
+    color: gray;
+    padding: 10px 0;
+}
+
+footer p>a {
+    color: rgb(180, 180, 180);
+    text-decoration: none;
+    transition: .4s;
+}
+
+footer p>a:hover {
+    color: white;
+}
+
+.Footer_Links {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 150px;
+    padding: 0 0 150px 0;
+    border-bottom: 1px solid grey;
+}
+
+.Footer_Links>div {
+    width: 220px;
+    height: auto;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.Footer_Links>div:last-child {
+    width: 300px;
+}
+
+.Footer_Links ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Footer_Links li {
+    list-style: none;
+    width: 100%;
+}
+
+.Footer_Links a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.Footer_Links>div>div {
+    width: 100%;
+    position: relative;
+}
+
+.Social_Links {
+    width: 100%;
+}
+
+.Social_Links>ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.Social_Links li {
+    width: 40px;
+    height: 40px;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+}
+
+footer h2 {
+    color: white;
+    font-style: italic;
+}
+
+footer input {
+    width: 100%;
+    background: none;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+footer button {
+    font-size: 14px;
+    border: none;
+    background: none;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+
+
+@media (min-width:1200px) {
+    .Info_Box {
+        top: 85%;
+    }
+
+    .Banner_Href:hover .Info_Box {
+        top: 50%;
+    }
+
+    .Banner_Href h2 {
+        font-size: 16px;
+    }
+
+    .Product_Container {
+        padding: 100px 0;
+    }
+
+    .Product_Tittle_Box h1 {
+        text-align: center;
+    }
+
+    .Product_Box {
+        align-items: flex-start;
+    }
+
+    .Categorise_Banner_Container h1 {
+        text-align: center;
+    }
+
+    .Banner_Category {
+        height: 500px;
+    }
+
+    .Banner_Trending_Container {
+        text-align: center;
+    }
+
+    .Trending_Img_Box button {
+        margin-top: 50px;
+    }
+
+    .mySwiper {
+        width: 100%;
+    }
+
+    .Shop_Categories_Box {
+        align-items: center;
+    }
+
+    .Category_Img_Box {
+        height: 500px;
+    }
+
+    .Category_Info_Box {
+        top: 80%;
+    }
+
+    .Partniors_Group_Img_Box {
+        height: 60px;
+    }
+
+    .Partniors_Group_Img_Box:hover {
+        background-position: 50% -60px;
+    }
+
+    .Info_Web_Box_Container {
+        align-items: center;
+    }
+
+    .Info_Box_Img_Container {
+        align-items: flex-start;
+    }
+
+    .Insta_Img {
+        width: 900px;
+        height: 830px;
+    }
+
+    .Web_Img_Box_Container {
+        width: 600px;
+    }
+
+    .Web_Img_Box_Container a {
+        width: 250px;
+        height: 250px;
+    }
+
+    footer {
+        padding: 150px 40px;
+    }
+
+    .Footer_Links {
+        gap: 20px;
+        padding: 0 0 50px 0;
+    }
+}
+
+@media(min-width:1024px) and (max-width:1200px) {
+
+    .Cart_Container {
+        display: none;
+    }
+
+    .Header_Container {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .Menu_Box {
+        background: white;
+        height: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        top: 100%;
+    }
+
+    .Menu_Box ul {
+        flex-direction: column;
+    }
+
+    .Main_Banner {
+        height: 400px;
+    }
+
+    .Main_Bnner_Href_Box {
+        flex-direction: column;
+    }
+
+    .Banner_Href {
+        flex: auto;
+        width: 100%;
+    }
+
+    .Banner_Box_Img {
+        background-position: unset;
+        align-items: flex-start;
+    }
+
+    .Banner_Info_Container {
+        transform: translateX(0);
+        padding: 30px;
+    }
+
+    .Banner_Category {
+        height: 500px;
+    }
+
+    .Trending_Container {
+        flex-direction: column;
+    }
+
+    swiper-container {
+        width: 100%;
+    }
+
+    .Category_Info_Box {
+        top: 85%;
+    }
+
+    .Category {
+        height: 490px;
+    }
+
+    .Partniors_Group_Container {
+        flex-wrap: wrap;
+    }
+
+    .Info_Box_Img_Container {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .Insta_Img {
+        width: 100%;
+    }
+
+    .Web_Img_Box_Container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .Web_Img_Box_Container a {
+        width: 450px;
+    }
+
+    footer {
+        padding: 150px 40px;
+    }
+
+    .Footer_Links {
+        justify-content: flex-start;
+        padding: 0 0 50px 0;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .Footer_Links>div {
+        width: 350px;
+    }
+}
+
+@media(min-width:768px) and (max-width:1024px) {
+    .Menu_Btn {
+        display: flex;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .Menu_Box ul {
+        flex-direction: column;
+    }
+
+    .Product_Tittle_Box h1 {
+        font-size: 35px;
+    }
+
+    .Product {
+        width: 350px;
+        gap: 25px;
+    }
+
+    .Product_Img_Box {
+        height: 250px;
+    }
+
+    .Categorise_Banner_Container h1 {
+        font-size: 45px;
+    }
+
+    .Banner_Trending_Container h1 {
+        font-size: 45px;
+    }
+
+    swiper-slide {
+        font-size: 18px;
+    }
+
+    .Shop_Categories_Box h1 {
+        font-size: 45px;
+    }
+
+    .Categories_Box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Header_Title_Box {
+        opacity: 0;
+    }
+
+    .Cart_Container {
+        display: none;
+    }
+
+    .Header_Container {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .Menu_Box {
+        background: white;
+        height: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        z-index: 9999999999999;
+    }
+
+    .Main_Banner {
+        height: 480px;
+    }
+
+    .Main_Bnner_Href_Box {
+        flex-direction: column;
+    }
+
+    .Banner_Href {
+        flex: auto;
+        width: 100%;
+        height: 480px;
+    }
+
+    .Product_Tittle_Box h1 {
+        font-size: 40px;
+    }
+
+    .Info_Box_Img_ {
+        height: 530px;
+    }
+
+    .Banner_Info_Container {
+        transform: translateX(0);
+        width: 510px;
+        height: 350px;
+        padding: 30px;
+    }
+
+    .Banner_Box_Img {
+        background-position: unset;
+        align-items: flex-start;
+    }
+
+    .Banner_Info_Container h1 {
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .Banner_Info_Container span {
+        font-size: 40px;
+        font-weight: 900;
+    }
+
+    .Banner_Info_Container p {
+        font-size: 17px;
+    }
+
+    .Banner_Info_Container button {
+        font-size: 14px;
+    }
+
+    .Categorise_Banner_Container h1 {
+        font-size: 40px;
+    }
+
+    .Banner_Categories_Box {
+        flex-wrap: wrap;
+    }
+
+    .Banner_Category {
+        width: 300px;
+        height: 450px;
+    }
+
+    .Banner_Trending_Container h1 {
+        font-size: 40px;
+    }
+
+    .Trending_Container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    swiper-container {
+        width: 100%;
+    }
+
+    .Shop_Categories_Box h1 {
+        font-size: 40px;
+    }
+
+    .Category_Img_Box {
+        height: 520px;
+    }
+
+    .Category_Info_Box {
+        top: 80%;
+    }
+
+    .Partniors_Group_Container {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    .Info_Web_Box_Container h1 {
+        font-size: 40px;
+    }
+
+    .Info_Box_Img_Container {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .Insta_Img {
+        width: 100%;
+    }
+
+    .Web_Img_Box_Container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .Web_Img_Box_Container a {
+        width: 455px;
+    }
+
+    footer {
+        padding: 150px 0;
+    }
+
+    .Footer_Links {
+        justify-content: flex-start;
+        padding: 0 0 50px 50px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .Footer_Links>div {
+        width: 340px;
+    }
+}
+
+@media(min-width:552px) and (max-width:768px) {
+    .Menu_Btn {
+        display: flex;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .Header_Title_Box {
+        display: none;
+    }
+
+    .Cart_Container {
+        display: none;
+    }
+
+    .Header_Container {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .Menu_Box {
+        background: white;
+        height: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        z-index: 99999999999999;
+    }
+
+    .Menu_Box ul {
+        flex-direction: column;
+    }
+
+    .Main_Banner {
+        height: 350px;
+    }
+
+    .Main_Bnner_Href_Box {
+        flex-direction: column;
+    }
+
+    .Banner_Href {
+        flex: auto;
+        width: 100%;
+        height: 480px;
+    }
+
+    .Info_Box {
+        top: 75%;
+    }
+
+    .Banner_Href h2 {
+        font-size: 36px;
+    }
+
+    .Banner_Href p {
+        font-size: 20px;
+    }
+
+    .Banner_Href button {
+        font-size: 18px;
+    }
+
+    .Banner_Href:hover .Info_Box {
+        top: 56%;
+    }
+
+    .Product_Tittle_Box h1 {
+        font-size: 35px;
+    }
+
+    .Product {
+        width: 300px;
+    }
+
+    .Product_Img_Box {
+        height: 250px;
+    }
+
+    .Info_Box_Img_ {
+        height: 530px;
+    }
+
+    .Banner_Info_Container {
+        transform: translateX(0);
+        width: 510px;
+        height: 350px;
+        padding: 30px;
+    }
+
+    .Banner_Box_Img {
+        background-position: unset;
+        align-items: flex-start;
+    }
+
+    .Banner_Info_Container {
+        height: auto;
+    }
+
+    .Banner_Info_Container h1 {
+        font-size: 50px;
+        font-weight: 900;
+    }
+
+    .Banner_Info_Container span {
+        font-size: 50px;
+        font-weight: 900;
+    }
+
+    .Banner_Info_Container p {
+        font-size: 22px;
+    }
+
+    .Banner_Info_Container button {
+        font-size: 18px;
+    }
+
+    .Categorise_Banner_Container h1 {
+        font-size: 45px;
+    }
+
+    .Banner_Categories_Box {
+        flex-wrap: wrap;
+    }
+
+    .Banner_Category {
+        width: 550px;
+        height: auto;
+    }
+
+    .Banner_Category_Info h3 {
+        font-size: 35px;
+    }
+
+    .Banner_Category_Info span {
+        font-size: 28px;
+    }
+
+    .Banner_Category_Info button {
+        font-size: 22px;
+    }
+
+    .Banner_Trending_Container h1 {
+        font-size: 45px;
+    }
+
+    .Trending_Container {
+        flex-direction: column;
+    }
+
+    .Trending_Img_Box button {
+        font-size: 30px;
+    }
+
+    swiper-container {
+        width: 100%;
+    }
+
+    swiper-slide {
+        font-size: 18px;
+    }
+
+    .Shop_Categories_Box h1 {
+        font-size: 45px;
+    }
+
+    .Categories_Box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Category {
+        width: 300px;
+    }
+
+    .Category_Img_Box {
+        height: 400px;
+    }
+
+    .Category_Info_Box {
+        top: 78%;
+    }
+
+    .Category_Info_Box h2 {
+        font-size: 35px;
+        font-weight: 900;
+    }
+
+    swiper-container {
+        width: 100%;
+    }
+
+    .Partniors_Group_Container {
+        flex-wrap: wrap;
+    }
+
+    .Info_Web_Box_Container h1 {
+        font-size: 45px;
+    }
+
+    .Info_Box_Img_Container {
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .Insta_Img {
+        width: 100%;
+        height: 600px;
+    }
+
+    .Web_Img_Box_Container {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .Web_Img_Box_Container a {
+        width: 250px;
+        height: 250px;
+    }
+
+    footer {
+        padding: 100px 20px;
+    }
+
+    .Footer_Links {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+
+    /* footer{
+
+    } */
+}
+
+@media(min-width:320px) and (max-width:552px) {
+    .Menu_Btn {
+        display: flex;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .Header_Title_Box {
+        display: none;
+    }
+
+    .Cart_Container {
+        display: none;
+    }
+
+    .Logo_Box {
+        width: 50px;
+        height: 50px;
+    }
+
+    .Menu_Btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .Header_Container {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .Menu_Box {
+        background: white;
+        height: 0;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        top: 100%;
+        z-index: 99999999999;
+    }
+
+    .Menu_Box ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        gap: 0;
+    }
+
+    .Menu_Box li {
+        font-size: 20px;
+    }
+
+    .Main_Banner {
+        height: 200px;
+    }
+
+    .Main_Bnner_Href_Box {
+        flex-direction: column;
+    }
+
+
+    .Banner_Href {
+        flex: auto;
+        width: 100%;
+        height: 175px;
+    }
+
+    .Banner_Href:hover .Info_Box {
+        top: 0;
+    }
+
+    .Banner_Href button {
+        height: 40px;
+    }
+
+    .Banner_Href h2 {
+        font-size: 18px;
+    }
+
+    .Info_Box {
+        top: 70%;
+        padding: 20px;
+    }
+
+    .Product_Tittle_Box h1 {
+        font-size: 35px;
+    }
+
+    .Product_Img_Box {
+        height: 250px;
+    }
+
+    .Banner_Box_Img {
+        height: 430px;
+        background-position: unset;
+    }
+
+    .Banner_Info_Container {
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        /* background: linear-gradient(45deg, black, transparent); */
+        gap: 10px;
+        /* backdrop-filter: blur(5px); */
+        transform: translateX(0);
+    }
+
+    .Banner_Info_Container p {
+        line-height: 20px;
+    }
+
+    .Banner_Categories_Box {
+        flex-wrap: wrap;
+    }
+
+    .Banner_Category {
+        width: 100%;
+        height: 500px;
+    }
+
+    .Trending_Container {
+        flex-direction: column;
+    }
+
+    .Slide_Container_Box h1 {
+        padding: 0 10px;
+        font-size: 15px;
+    }
+
+    swiper-container {
+        width: 100%;
+    }
+
+    .Categories_Box {
+        flex-direction: column;
+    }
+
+    .Category {
+        width: 100%;
+    }
+
+    .Category_Img_Box {
+        height: 500px;
+    }
+
+    .Category_Img_Box img {
+        object-fit: cover;
+    }
+
+    .Category_Info_Box {
+        top: 82%;
+    }
+
+    .Partniors_Group_Container {
+        flex-wrap: wrap;
+    }
+
+    .Info_Box_Img_Container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .Insta_Img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .Web_Img_Box_Container {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .Web_Img_Box_Container a {
+        width: 100%;
+    }
+
+    footer {
+        padding: 100px 20px;
+    }
+
+    .Footer_Links {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+}
