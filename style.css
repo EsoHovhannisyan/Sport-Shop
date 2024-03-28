@@ -820,14 +820,16 @@ swiper-slide img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .Web_Img_Box_Container {
-    width: 1000px;
+    width: 100%;
     height: auto;
     /* background-color: red; */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
@@ -859,7 +861,7 @@ swiper-slide img {
 }
 
 .Insta_Img {
-    width: 900px;
+    width: 100%;
     height: 830px;
     overflow: hidden;
     background-position: center;
@@ -1009,7 +1011,7 @@ footer button {
     }
 
     .Banner_Href:hover .Info_Box {
-        top: 50%;
+        top: 68%;
     }
 
     .Banner_Href h2 {
@@ -1053,7 +1055,7 @@ footer button {
     }
 
     .Category_Img_Box {
-        height: 500px;
+        height: 700px
     }
 
     .Category_Info_Box {
@@ -1072,22 +1074,18 @@ footer button {
         align-items: center;
     }
 
-    .Info_Box_Img_Container {
-        align-items: flex-start;
-    }
-
     .Insta_Img {
-        width: 900px;
-        height: 830px;
+        width: 100%;
+        height: 800px;
     }
 
     .Web_Img_Box_Container {
-        width: 600px;
+        width: 100%;
     }
 
     .Web_Img_Box_Container a {
-        width: 250px;
-        height: 250px;
+        width: 400px;
+        height: 400px;
     }
 
     footer {
@@ -1183,7 +1181,6 @@ footer button {
 
     .Web_Img_Box_Container {
         width: 100%;
-        justify-content: space-between;
     }
 
     .Web_Img_Box_Container a {
@@ -1387,11 +1384,13 @@ footer button {
 
     .Web_Img_Box_Container {
         width: 100%;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 30px;
     }
 
     .Web_Img_Box_Container a {
-        width: 455px;
+        width: 300px;
+        height: 300px;
     }
 
     footer {
@@ -1587,11 +1586,11 @@ footer button {
     }
 
     .Category {
-        width: 300px;
+        width: 100%;
     }
 
     .Category_Img_Box {
-        height: 400px;
+        height: 800px;
     }
 
     .Category_Info_Box {
