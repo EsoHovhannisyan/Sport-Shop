@@ -1732,8 +1732,9 @@ footer button {
     }
 
     .Info_Box {
-        top: 70%;
+        top: 67%;
         padding: 20px;
+        height: 100%;
     }
 
     .Product_Tittle_Box h1 {
